@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Canvas from "./Canvas";
+// import Canvas from "./Canvas";
 
 const Who: FC = () => {
   return (
@@ -34,9 +34,8 @@ const Who: FC = () => {
           Who am I?
         </h1>
 
-        {/* Hide my age :v */}
         <p data-scroll className="text-lg text-gray-200" id="story">
-        I am Ahmed Hassan, a software engineer / MERN stack developer with a Bachelor's degree, and I have a passion for creating immersive digital experiences. Over the past two years, I have gained extensive industry experience and have become proficient in a wide range of technologies such as React, Node, MongoDB, SQL, PostgreSQL, ExpressJS, AntD, MUI, Bootstrap, and AWS. As an expert in my field, I am dedicated to building innovative solutions that are not limited to the ordinary, using my skills to develop impactful software. From web applications to full-stack development, I apply my creativity and attention to detail to every project, ensuring that the end product is a work of art that exceeds all expectations.
+        I am Ahmed Hassan, a software engineer, MERN stack developer with a BS degree, and I have a passion for creating immersive digital experiences. Over the past two years, I have gained extensive industry experience and have become proficient in a wide range of technologies such as React, Node, MongoDB, SQL, PostgreSQL, ExpressJS, AntD, MUI, Bootstrap, and AWS. As an expert in my field, I am dedicated to building innovative solutions that are not limited to the ordinary, using my skills to develop impactful software. From web applications to full-stack development, I apply my creativity and attention to detail to every project, ensuring that the end product is a work of art that exceeds all expectations.
         </p>
       </div>
     </div>

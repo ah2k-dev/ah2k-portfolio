@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { NextPage } from "next";
 
 import Contact from "../components/Contact";
 import Cursor from "../components/Cursor";
@@ -8,9 +8,9 @@ import MainProjects from "../components/MainProjects";
 import Skills from "../components/Skills";
 import SmallProjects from "../components/SmallProjects";
 import Who from "../components/Who";
-import { allDataType } from "../shared/types";
+// import { allDataType } from "../shared/types";
 import { useRef } from "react";
-import Canvas from "../components/Canvas";
+// import Canvas from "../components/Canvas";
 import { data } from "../shared/contants";
 
 

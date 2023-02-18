@@ -1,6 +1,6 @@
-import { BiLinkExternal } from "react-icons/bi";
+// import { BiLinkExternal } from "react-icons/bi";
 import { FC } from "react";
-import { FaGithub } from "react-icons/fa";
+// import { FaGithub } from "react-icons/fa";
 import { allDataType } from "../shared/types";
 
 interface MainProjectsProps {
@@ -22,7 +22,7 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
       <h1 className="text-center text-4xl mb-10 md:mb-20">Projects</h1>
       {projects.map((project, index) => (
         <div
-          // key={project.id}
+          key={project.title}
           className={`item flex gap-[20px] lg:gap-[50px] w-full px-[5vw] md:min-h-[60vh] mb-20 md:my-10 ${
             index % 2 === 1
               ? "flex-col lg:flex-row"

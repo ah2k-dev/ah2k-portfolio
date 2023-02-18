@@ -45,14 +45,23 @@ const SmallProjects: FC<SmallProjectsProps> = ({ projects }) => {
                   <h1>{project.title}</h1>
                   <p className="text-gray-400">{project.description}</p>
                 </div>
+                <div className="flex gap-[5px]" style={{
+                  marginTop: "10px",
+                  display: "flex",
+                }}>
+                  {project.tech.map((t) => (
+                    <img key={t} className="w-[30px] h-[30px]" src={t} alt="" />
+                  ))}
+                </div>
                 <div
                   style={{
                     display: "flex",
                     justifyContent: "flex-end",
+                    marginTop: "10px",
                   }}
                 >
                   <a
-                    // href={project.github}
+                    href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="h-[45px] px-[15px] text-white rounded transition duration-300 flex items-center gap-[10px] bg-[#1b222b] hover:bg-[#191e25]"

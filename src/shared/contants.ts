@@ -303,11 +303,31 @@ export const data = {
     {
       id: "cl41bd91j4h2j0b14h717fxus",
       title: "Job Portal",
-      description: "A movie website built with TMDB and 2embed",
-      link: "https://e-cinema.vercel.app/",
-      icon: {
-        url: "https://media.graphassets.com/resize=height:40/output=format:webp/NVLrClLvSIa2D3SfZnoR",
-      },
+      description:
+        "This mobile job portal app is designed to simplify the job search process. Users can post job listings, apply for jobs, and track their progress, whether they are employers or job seekers. With an intuitive and user-friendly interface, this app makes it easy to find and apply for jobs on-the-go, and monitor progress from the palm of your hand.",
+      link: "https://github.com/ah2k-dev/Job-portal",
+      tech: [
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/react.svg",
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/nodejs.svg",
+        "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png",
+        "https://seeklogo.com/images/M/mongodb-logo-655F7D542D-seeklogo.com.png",
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/git.svg",
+      ],
+    },
+    {
+      id: "cl41bd91j4h2j0b14h717fxus",
+      title: "Chat App",
+      description:
+        "This chat application is built on the MERN stack and uses sockets for real-time communication. With support for multiple users and an intuitive interface, it's perfect to integrate it in a project where there is a need for communication flow.",
+      link: "https://github.com/ah2k-dev/Chat-app",
+      tech: [
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/react.svg",
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/nodejs.svg",
+        "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png",
+        "https://seeklogo.com/images/M/mongodb-logo-655F7D542D-seeklogo.com.png",
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/git.svg",
+        "https://i1.wp.com/www.ux-republic.com/wp-content/uploads/2018/03/socket.png?fit=375%2C375&ssl=1",
+      ],
     },
   ],
 };

@@ -30,7 +30,7 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
       <div className="grid justify-center grid-cols-4 md:grid-cols-8 gap-y-[10px] md:gap-y-[20px]">
         {skills.map((skill) => (
           <a
-            // key={skill.link}
+            key={skill.title}
             // href={skill.link}
             // target="_blank"
             rel="noopener noreferrer"

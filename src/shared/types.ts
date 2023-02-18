@@ -20,8 +20,6 @@ export interface allDataType {
     title: string;
     description: string;
     link: string;
-    icon: {
-      url: string;
-    };
+    tech: string[];
   }[];
 }

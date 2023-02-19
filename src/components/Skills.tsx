@@ -10,7 +10,9 @@ const Skills: FC<SkillsProps> = ({ skills }) => {
     <div className="lg:min-h-[70vh] px-[5vw] py-[80px] flex flex-col items-center justify-center z-[4]" style={{
       // backgroundColor: "#1a1a1a",
       height: "100%",
-    }}>
+    }}
+    id="skills"
+    >
       <h1
         data-scroll
         data-scroll-direction="horizontal"

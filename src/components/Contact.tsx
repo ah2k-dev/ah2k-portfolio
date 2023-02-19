@@ -61,6 +61,7 @@ const Contact: FC = () => {
         paddingTop: "30px",
         paddingBottom: "30px",
       }}
+      id="contact"
     >
       <h1 className="text-center text-4xl mt-14 md: mb-10">Get in touch</h1>
       <div

@@ -12,34 +12,40 @@ import Who from "../components/Who";
 import { useRef } from "react";
 // import Canvas from "../components/Canvas";
 import { data } from "../shared/contants";
-
+import Nav from "../components/Nav";
 
 const Home: NextPage = () => {
   const containerRef = useRef(null);
-  console.log(data)
+  // const [visible, setVisible] = useState(false);
+
   return (
-    <LocomotiveScrollProvider
-      options={{
-        smooth: true,
-        tablet: {
+    <>
+      <LocomotiveScrollProvider
+        options={{
           smooth: true,
-          breakpoint: 768,
-        },
-      }}
-      watch={[]}
-      containerRef={containerRef}
-    >
-      <Cursor />
-      <div data-scroll-container ref={containerRef}>
-        {/* <Canvas /> */}
-        <Intro />
-        <Who />
-        <Skills skills={data.skills} />
-        <MainProjects projects={data.projects} />
-        <SmallProjects projects={data.smallProjects} />
-        <Contact />
-      </div>
-    </LocomotiveScrollProvider>
+          tablet: {
+            smooth: true,
+            breakpoint: 768,
+          },
+        }}
+        watch={[]}
+        containerRef={containerRef}
+      >
+        <Cursor />
+        {/* <ScrollToTop /> */}
+        <Nav />
+        <div data-scroll-container id="main">
+          {/* <Canvas /> */}
+          <Intro />
+
+          <Who />
+          <Skills skills={data.skills} />
+          <MainProjects projects={data.projects} />
+          <SmallProjects projects={data.smallProjects} />
+          <Contact />
+        </div>
+      </LocomotiveScrollProvider>
+    </>
   );
 };
 
@@ -55,5 +61,3 @@ export default Home;
 //     revalidate: 3600,
 //   };
 // };
-
-

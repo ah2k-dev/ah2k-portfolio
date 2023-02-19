@@ -18,6 +18,7 @@ const MainProjects: FC<MainProjectsProps> = ({ projects }) => {
         paddingTop: "30px",
         paddingBottom: "30px",
       }}
+      id="projects"
     >
       <h1 className="text-center text-4xl mb-10 md:mb-20">Projects</h1>
       {projects.map((project, index) => (

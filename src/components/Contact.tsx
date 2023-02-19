@@ -1,12 +1,68 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { socialLinks } from "../shared/contants";
-
+import { FiSend } from "react-icons/fi";
 const Contact: FC = () => {
+  const [isSent, setIsSent] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [subject, setSubject] = useState("");
+  const handleSend = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // setIsSent(true);
+    console.log("email: ", email);
+    console.log("name: ", name);
+    console.log("subject: ", subject);
+    setLoading(true);
+    fetch(
+      "https://public.herotofu.com/v1/d1d08ec0-b028-11ed-bca4-27c965651142",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          subject,
+        }),
+      }
+    )
+      .then((response) => {
+        // Endpoint thinks that it's likely a spam/bot request, you need to change "spam protection mode" to "never" in HeroTofu forms
+        if (response.status === 422) {
+          throw new Error("Are you robot?");
+        }
+
+        if (response.status !== 200) {
+          throw new Error(`${response.statusText} (${response.status})`);
+        }
+
+        return response.json();
+      })
+      .then(() => {
+        setIsSent(true);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setIsError(err.toString());
+        setLoading(false);
+      });
+  };
   return (
-    <div className="pb-20">
-      <h1 className="text-center text-4xl mt-14 md:mt-28 mb-10">
-        Get in touch
-      </h1>
+    <div
+      className="pb-20"
+      style={{
+        backgroundColor: "#1a1a1a",
+        minHeight: "100vh",
+        maxHeight: "max-content",
+        paddingTop: "30px",
+        paddingBottom: "30px",
+      }}
+    >
+      <h1 className="text-center text-4xl mt-14 md: mb-10">Get in touch</h1>
       <div
         data-scroll
         data-scroll-speed="1"
@@ -18,6 +74,7 @@ const Contact: FC = () => {
               action={process.env.NEXT_PUBLIC_FORM_URL}
               method="POST"
               className="flex flex-col gap-2"
+              onSubmit={handleSend}
             >
               <label htmlFor="name">Your name</label>
               <input
@@ -27,6 +84,8 @@ const Contact: FC = () => {
                 placeholder="John Doe"
                 required
                 minLength={3}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
               <label htmlFor="email">Your email</label>
               <input
@@ -35,6 +94,8 @@ const Contact: FC = () => {
                 name="email"
                 placeholder="johndoe@gmail.com"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <label htmlFor="subject">Message</label>
               <input
@@ -43,8 +104,14 @@ const Contact: FC = () => {
                 name="subject"
                 placeholder="I want to talk to you"
                 required
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
               />
-              <button className="mt-2 py-2 text-white rounded transition duration-300 flex justify-center items-center gap-[10px] bg-[#1876d2] hover:bg-[#2884e0]">
+              <button
+                className="mt-2 py-2 text-white rounded transition duration-300 flex justify-center items-center gap-[10px] bg-[#1876d2] hover:bg-[#2884e0]"
+                type="submit"
+              >
+                <FiSend />
                 Send
               </button>
             </form>

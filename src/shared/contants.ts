@@ -55,6 +55,11 @@ export const socialLinks = [
     link: "https://www.linkedin.com/in/ahmed-hassan-535767224/",
   },
   {
+    title: "Gmail",
+    icon: "/gmail.png",
+    link: "mailto:ah2k.dev@gmail.com",
+  },
+  {
     title: "Facebook",
     icon: "/facebook.png",
     link: "https://www.facebook.com/ahmedhassan2k/",
@@ -112,6 +117,10 @@ export const data = {
       title: "Material UI",
     },
     {
+      image: "https://cdn.worldvectorlogo.com/logos/styled-components-1.svg",
+      title: "Styled Components",
+    },
+    {
       image:
         "https://seeklogo.com/images/R/redux-logo-9CA6836C12-seeklogo.com.png",
       title: "Redux",
@@ -146,6 +155,11 @@ export const data = {
         "https://seeklogo.com/images/P/postgresql-logo-5309879B58-seeklogo.com.png",
 
       title: "PostgreSQL",
+    },
+    {
+      image:
+        "https://seeklogo.com/images/F/firebase-logo-402F407EE0-seeklogo.com.png",
+      title: "Firebase",
     },
     {
       image:
@@ -302,6 +316,36 @@ export const data = {
   smallProjects: [
     {
       id: "cl41bd91j4h2j0b14h717fxus",
+      title: "Quiz Application",
+      description:
+        "This MERN stack-based quiz application offers support for multiple types of questions including images and audio files, and includes anti-cheat features for accurate results. With three portals for admin, teacher, and student, this app provides complete control over the application for easy creation and management of quizzes.",
+      link: "https://github.com/ah2k-dev/quiz-app",
+      tech: [
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/react.svg",
+        "https://seeklogo.com/images/A/ant-design-logo-EAB6B3D5D9-seeklogo.com.png",
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/nodejs.svg",
+        "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png",
+        "https://seeklogo.com/images/M/mongodb-logo-655F7D542D-seeklogo.com.png",
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/git.svg",
+      ],
+    },
+    {
+      id: "cl41bd91j4h2j0b14h717fxus",
+      title: "Expense Tracker and Budget Planner",
+      description:
+        "This server-driven mobile application is a budget planner and expense tracker that enables users to easily manage their expenses, track their spending, and plan their budgets. With advanced features for goal setting, budget planning, and real-time reporting, this app is perfect for anyone looking to manage their finances.",
+      link: "https://github.com/ah2k-dev/",
+      tech: [
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/react.svg",
+        "https://seeklogo.com/images/A/ant-design-logo-EAB6B3D5D9-seeklogo.com.png",
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/nodejs.svg",
+        "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png",
+        "https://seeklogo.com/images/M/mongodb-logo-655F7D542D-seeklogo.com.png",
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/git.svg",
+      ],
+    },
+    {
+      id: "cl41bd91j4h2j0b14h717fxus",
       title: "Job Portal",
       description:
         "This mobile job portal app is designed to simplify the job search process. Users can post job listings, apply for jobs, and track their progress, whether they are employers or job seekers. With an intuitive and user-friendly interface, this app makes it easy to find and apply for jobs on-the-go, and monitor progress from the palm of your hand.",
@@ -327,6 +371,56 @@ export const data = {
         "https://seeklogo.com/images/M/mongodb-logo-655F7D542D-seeklogo.com.png",
         "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/git.svg",
         "https://i1.wp.com/www.ux-republic.com/wp-content/uploads/2018/03/socket.png?fit=375%2C375&ssl=1",
+      ],
+    },
+    {
+      id: "cl41bd91j4h2j0b14h717fxus",
+      title: "React Auth Boilerplate",
+      description:
+        "This React JS authentication boilerplate provides secure authentication routes with custom hooks, using Redux and Axios. With protected routes and the Ant Design (antd) library for user interface design, it's an ideal solution for web developers looking to build robust and customizable authentication systems.",
+      link: "https://github.com/ah2k-dev/react-auth-boilerplate",
+      tech: [
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/react.svg",
+        "https://seeklogo.com/images/A/ant-design-logo-EAB6B3D5D9-seeklogo.com.png",
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/git.svg",
+      ],
+    },
+    {
+      id: "cl41bd91j4h2j0b14h717fxus",
+      title: "User Authentication with email verification",
+      description:
+        "This boilerplate is built with Node.js and Express.js, with support for JWT, Bcrypt.js, Nodemailer, and basic user authentication routes and controllers. With this powerful combination of technologies, developers can build secure and customizable web applications with ease. The app provides simple and secure authentication routes, with robust security features to protect user data.",
+      link: "https://github.com/ah2k-dev/userAuth-with-email-verification",
+      tech: [
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/nodejs.svg",
+        "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png",
+        "https://seeklogo.com/images/M/mongodb-logo-655F7D542D-seeklogo.com.png",
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/git.svg",
+      ],
+    },
+    {
+      id: "cl41bd91j4h2j0b14h717fxus",
+      title: "LinkedIn Clone",
+      description:
+        "This LinkedIn clone is a React-based app that lets users sign in with Google and share posts, pictures, and videos. With Firebase authentication, users can easily manage their content and interact with others on the platform.",
+      link: "https://github.com/ah2k-dev/linkedin-clone",
+      tech: [
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/react.svg",
+        "https://cdn.worldvectorlogo.com/logos/styled-components-1.svg",
+        "https://seeklogo.com/images/F/firebase-logo-402F407EE0-seeklogo.com.png",
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/git.svg",
+      ],
+    },
+
+    {
+      id: "cl41bd91j4h2j0b14h717fxus",
+      title: "Covid Tracker",
+      description:
+        "This React-based COVID-19 tracker provides real-time updates on the latest statistics, including confirmed cases, deaths, and recoveries. With data sourced from reputable health organizations, the app provides reliable information to help users stay informed about the pandemic.",
+      link: "https://github.com/ah2k-dev/covidapp",
+      tech: [
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/react.svg",
+        "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/css.svg",
       ],
     },
   ],

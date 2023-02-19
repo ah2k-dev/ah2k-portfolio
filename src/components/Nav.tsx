@@ -2,9 +2,68 @@ import React from "react";
 import { Navbar } from "responsive-navbar-react";
 import "responsive-navbar-react/dist/index.css";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
+import { useEffect, useState } from "react";
 
 const Nav = () => {
   const { scroll } = useLocomotiveScroll();
+  const [active, setActive] = useState("");
+  useEffect(() => {
+    // console.log(scroll);
+    if (scroll) {
+      scroll.on("scroll", (obj: any) => {
+        // console.log(obj.currentElements)
+        Object.keys(obj.currentElements).forEach((key) => {
+          console.log(obj.currentElements[key]?.el?.parentElement?.classList.value.toString())
+          if (
+            obj.currentElements[key]?.el?.parentElement?.classList?.value
+              ?.toString()
+              ?.includes("intro")
+          ) {
+            setActive("home");
+          }
+          if (
+            obj.currentElements[key]?.el?.parentElement?.classList?.value
+              ?.toString()
+              ?.includes("who")
+          ) {
+            setActive("about");
+          }
+          if (
+            obj.currentElements[key]?.el?.parentElement?.classList?.value
+              ?.toString()
+              ?.includes("skills")
+          ) {
+            setActive("skills");
+          }
+          if (
+            obj.currentElements[key]?.el?.parentElement?.classList?.value
+              ?.toString()
+              ?.includes("projects")
+          ) {
+            setActive("projects");
+          }
+          if (
+            obj.currentElements[key]?.el?.parentElement?.classList?.value
+              ?.toString()
+              ?.includes("personal-projects")
+          ) {
+            setActive("personal-projects");
+          }
+          if (
+            obj.currentElements[key]?.el?.parentElement?.classList?.value
+              ?.toString()
+              ?.includes("contact")
+          ) {
+            setActive("contact");
+          }
+        });
+
+        // if (obj.scroll.y > 500) {
+        // } else {
+        // }
+      });
+    }
+  }, [scroll]);
   const handleNavClick = (link: string) => {
     scroll.scrollTo(link, {
       duration: 1000,
@@ -12,100 +71,80 @@ const Nav = () => {
       easing: [0.165, 0.84, 0.44, 1],
     });
   };
+  const buttonStyle = {
+    // color : active === "home" ? "white" : "black",
+  };
   const props = {
     items: [
       {
         text: (
-          <a
-            style={{
-              fontSize: "1rem",
-              fontWeight: "400",
-              color: "white",
-              cursor: "pointer",
-            }}
+          <button
+            style={buttonStyle}
+            className={`navBtn ${active === "home" && "styled"}`}
             onClick={() => handleNavClick("#main")}
           >
-            {"{Home}"}
-          </a>
+            
+            {"Home"}
+          </button>
         ),
         // link: "#main",
       },
       {
         text: (
-          <a
-            style={{
-              fontSize: "1rem",
-              fontWeight: "400",
-              color: "white",
-              cursor: "pointer",
-            }}
+          <button
+            style={buttonStyle}
+            className={`navBtn ${active === "about" && "styled"}`}
             onClick={() => handleNavClick("#who")}
           >
-            {"{About}"}
-          </a>
+            {"About"}
+          </button>
         ),
         // link: "#docs",
       },
       {
         text: (
-          <a
-            style={{
-              fontSize: "1rem",
-              fontWeight: "400",
-              color: "white",
-              cursor: "pointer",
-            }}
+          <button
+            style={buttonStyle}
+            className={`navBtn ${active === "skills" && "styled"}`}
             onClick={() => handleNavClick("#skills")}
           >
-            {"{Skills}"}
-          </a>
+            {"Skills"}
+          </button>
         ),
         // link: "#custom-bar",
       },
       {
         text: (
-          <a
-            style={{
-              fontSize: "1rem",
-              fontWeight: "400",
-              color: "white",
-              cursor: "pointer",
-            }}
+          <button
+            style={buttonStyle}
+            className={`navBtn ${active === "projects" && "styled"}`}
             onClick={() => handleNavClick("#projects")}
           >
-            {"{Projects}"}
-          </a>
+            {"Projects"}
+          </button>
         ),
         // link: "#contact",
       },
       {
         text: (
-          <a
-            style={{
-              fontSize: "1rem",
-              fontWeight: "400",
-              color: "white",
-              cursor: "pointer",
-            }}
+          <button
+            style={buttonStyle}
+            className={`navBtn ${active === "personal-projects" && "styled"}`}
             onClick={() => handleNavClick("#personal-projects")}
           >
-            {"{Personal Projects}"}
-          </a>
+            {"Personal Projects"}
+          </button>
         ),
       },
       {
         text: (
-          <a
-            style={{
-              fontSize: "1rem",
-              fontWeight: "400",
-              color: "white",
-              cursor: "pointer",
-            }}
+          <button
+            style={buttonStyle}
+            className={`navBtn ${active === "contact" && "styled"}`}
             onClick={() => handleNavClick("#contact")}
           >
-            {"{Contact}"}
-          </a>
+            {"Contact"}
+          </button>
         ),
       },
     ],
@@ -124,9 +163,18 @@ const Nav = () => {
       sidebarStyles: {
         background: "#1a1a1a",
         buttonColor: "white",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        backgroundColor: "rgba(0, 0, 0, 0.9)",
+        zIndex: 1000,
+        // justifyContent: "center",
       },
-      linlStyles: {
-        color: "#efefef",
+      linkStyles: {
+        backgroundColor: "rgba(0, 0, 0, 0.9) !important",
+        // width: "100%",
+        // borderBottom: "1px solid #fff",
+        // alignText: "center",
       },
     },
   };

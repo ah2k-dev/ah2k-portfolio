@@ -7,7 +7,7 @@ import { m } from "framer-motion";
 
 const Intro: FC = () => {
   return (
-    <div className="relative h-screen flex justify-center items-center flex-col gap-5">
+    <div className="intro relative h-screen flex justify-center items-center flex-col gap-5">
       <Canvas />
 
       <svg

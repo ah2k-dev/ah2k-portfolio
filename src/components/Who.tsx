@@ -5,7 +5,7 @@ const Who: FC = () => {
   return (
     <div
       id="who"
-      className="flex gap-[5vw] px-[5vw] lg:px-[15vw] z-[2] lg:min-h-[70vh] items-center justify-center flex-col md:flex-row"
+      className="who flex gap-[5vw] px-[5vw] lg:px-[15vw] z-[2] lg:min-h-[70vh] items-center justify-center flex-col md:flex-row"
       style={{
         backgroundColor: "#1a1a1a",
         // height: "100%",

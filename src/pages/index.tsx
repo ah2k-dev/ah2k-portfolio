@@ -9,10 +9,12 @@ import Skills from "../components/Skills";
 import SmallProjects from "../components/SmallProjects";
 import Who from "../components/Who";
 // import { allDataType } from "../shared/types";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 // import Canvas from "../components/Canvas";
 import { data } from "../shared/contants";
 import Nav from "../components/Nav";
+import ScrollToTop from "../components/ScrollToTop";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 const Home: NextPage = () => {
   const containerRef = useRef(null);
@@ -31,10 +33,11 @@ const Home: NextPage = () => {
         watch={[]}
         containerRef={containerRef}
       >
+        {/* {console.log(scroll)} */}
         <Cursor />
-        {/* <ScrollToTop /> */}
+        <ScrollToTop />
         <Nav />
-        <div data-scroll-container id="main">
+        <div data-scroll-container ref={containerRef} id="main">
           {/* <Canvas /> */}
           <Intro />
 

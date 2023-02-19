@@ -25,3 +25,31 @@ input {
 ._3drDv {
   position: fixed !important;
 }
+
+.navBtn {
+  /* fontSize: "1rem",
+    fontWeight: "400",
+    color: "white",
+    cursor: "pointer",
+    backgroundColor: "voilet",
+    borderBottom: "2px solid white",
+    borderRadius: "10px", */
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(211, 211, 211);
+  cursor: pointer;
+  /* background-color: voilet; */
+  background-color: transparent;
+  border-radius: 10px;
+  /* position: relative; */
+
+}
+.navBtn :hover {
+  color: #027dff !important;
+  border-bottom: 2px solid #027dff !important;
+}
+
+.styled {
+  color: #027dff !important;
+  border-bottom: 2px solid #027dff !important;
+}

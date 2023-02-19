@@ -53,7 +53,7 @@ const Contact: FC = () => {
   };
   return (
     <div
-      className="pb-20"
+      className="contact pb-20"
       style={{
         backgroundColor: "#1a1a1a",
         minHeight: "100vh",

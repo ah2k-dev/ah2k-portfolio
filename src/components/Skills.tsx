@@ -7,7 +7,7 @@ interface SkillsProps {
 
 const Skills: FC<SkillsProps> = ({ skills }) => {
   return (
-    <div className="lg:min-h-[70vh] px-[5vw] py-[80px] flex flex-col items-center justify-center z-[4]" style={{
+    <div className="skills lg:min-h-[70vh] px-[5vw] py-[80px] flex flex-col items-center justify-center z-[4]" style={{
       // backgroundColor: "#1a1a1a",
       height: "100%",
     }}

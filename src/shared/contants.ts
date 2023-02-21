@@ -236,7 +236,7 @@ export const data = {
         "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/git.svg",
       ],
       image: {
-        url: "https://media.graphassets.com/resize=width:700/output=format:webp/3ZIRqpAJTkmCKLNjS1N1",
+        url: "/scas.jpeg",
       },
     },
     {
@@ -253,13 +253,13 @@ export const data = {
         "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/git.svg",
       ],
       image: {
-        url: "https://media.graphassets.com/resize=width:700/output=format:webp/3ZIRqpAJTkmCKLNjS1N1",
+        url: "/ecommerce.jpeg",
       },
     },
     {
-      title: "Insight Meter",
+      title: "Survey App",
       description:
-        "Welcome to the Insight Meter system, where insights meet simplicity! Our cutting-edge platform provides an immersive and engaging experience for survey creators, managers, and responders alike. With our mobile app, users can share their thoughts and opinions on surveys that match their interests and age groups. Meanwhile, the administrator portal offers a rich and intuitive dashboard to manage clients, survey responses, and payments with ease. Our clients can create surveys and analyze results with data visualization tools that make insights pop! Join us on this exciting journey and take the guesswork out of decision-making with the Insight Meter system.",
+        "Welcome to the Survey Management system, where insights meet simplicity! Our cutting-edge platform provides an immersive and engaging experience for survey creators, managers, and responders alike. With our mobile app, users can share their thoughts and opinions on surveys that match their interests and age groups. Meanwhile, the administrator portal offers a rich and intuitive dashboard to manage clients, survey responses, and payments with ease. Our clients can create surveys and analyze results with data visualization tools that make insights pop! Join us on this exciting journey and take the guesswork out of decision-making with the Insight Meter system.",
       technologies: [
         "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/react.svg",
         "https://seeklogo.com/images/R/redux-logo-9CA6836C12-seeklogo.com.png",
@@ -271,7 +271,7 @@ export const data = {
         "https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/git.svg",
       ],
       image: {
-        url: "https://media.graphassets.com/resize=width:700/output=format:webp/3ZIRqpAJTkmCKLNjS1N1",
+        url: "/survey-app.jpeg",
       },
     },
     {
@@ -290,7 +290,7 @@ export const data = {
         "https://seeklogo.com/images/A/amazon-web-services-aws-logo-6C2E3DCD3E-seeklogo.com.png",
       ],
       image: {
-        url: "https://media.graphassets.com/resize=width:700/output=format:webp/3ZIRqpAJTkmCKLNjS1N1",
+        url: "/ems.jpeg",
       },
     },
     {
@@ -309,7 +309,7 @@ export const data = {
         "https://seeklogo.com/images/A/amazon-web-services-aws-logo-6C2E3DCD3E-seeklogo.com.png",
       ],
       image: {
-        url: "https://media.graphassets.com/resize=width:700/output=format:webp/3ZIRqpAJTkmCKLNjS1N1",
+        url: "/deep-stats.jpeg",
       },
     },
   ],

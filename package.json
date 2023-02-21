@@ -21,7 +21,8 @@
     "react-icons": "^4.4.0",
     "react-locomotive-scroll": "^0.2.2",
     "react-scroll-to-top": "^3.0.0",
-    "responsive-navbar-react": "^1.2.1"
+    "responsive-navbar-react": "^1.2.1",
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "@types/node": "17.0.24",

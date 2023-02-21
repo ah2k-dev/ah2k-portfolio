@@ -4,7 +4,7 @@ import { BiChevronsDown } from "react-icons/bi";
 import Canvas from "./Canvas";
 import { characters } from "../shared/contants";
 import { m } from "framer-motion";
-
+import Typewriter from "typewriter-effect";
 const Intro: FC = () => {
   return (
     <div className="intro relative h-screen flex justify-center items-center flex-col gap-5">
@@ -45,7 +45,33 @@ const Intro: FC = () => {
         transition={{ duration: 0.4, delay: 1.8 }}
         className="text-3xl text-center z-[1] overflow-hidden"
       >
-        {`Aloha! I am a Full Stack Developer`}
+        <span
+          style={{
+            display: "flex",
+          }}
+        >
+          Aloha! I'm a{" "}
+          <span
+            style={{
+              marginLeft: "10px",
+            }}
+          >
+            <Typewriter
+              options={{
+                strings: [
+                  "Software Engineer",
+                  "Web App Developer",
+                  "MERN Stack Developer",
+                  "Pern Stack Developer",
+                  "DevOps Engineer",
+                ],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 10,
+              }}
+            />
+          </span>
+        </span>
       </m.p>
 
       <m.a

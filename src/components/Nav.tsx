@@ -3,6 +3,7 @@ import { Navbar } from "responsive-navbar-react";
 import "responsive-navbar-react/dist/index.css";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import { useEffect, useState } from "react";
+import { m } from "framer-motion";
 
 const Nav = () => {
   const { scroll } = useLocomotiveScroll();
@@ -13,7 +14,11 @@ const Nav = () => {
       scroll.on("scroll", (obj: any) => {
         // console.log(obj.currentElements)
         Object.keys(obj.currentElements).forEach((key) => {
-          console.log(obj.currentElements[key]?.el?.parentElement?.classList.value.toString())
+          console.log(
+            obj.currentElements[
+              key
+            ]?.el?.parentElement?.classList.value.toString()
+          );
           if (
             obj.currentElements[key]?.el?.parentElement?.classList?.value
               ?.toString()
@@ -71,19 +76,14 @@ const Nav = () => {
       easing: [0.165, 0.84, 0.44, 1],
     });
   };
-  const buttonStyle = {
-    // color : active === "home" ? "white" : "black",
-  };
   const props = {
     items: [
       {
         text: (
           <button
-            style={buttonStyle}
             className={`navBtn ${active === "home" && "styled"}`}
             onClick={() => handleNavClick("#main")}
           >
-            
             {"Home"}
           </button>
         ),
@@ -92,7 +92,6 @@ const Nav = () => {
       {
         text: (
           <button
-            style={buttonStyle}
             className={`navBtn ${active === "about" && "styled"}`}
             onClick={() => handleNavClick("#who")}
           >
@@ -104,7 +103,6 @@ const Nav = () => {
       {
         text: (
           <button
-            style={buttonStyle}
             className={`navBtn ${active === "skills" && "styled"}`}
             onClick={() => handleNavClick("#skills")}
           >
@@ -116,7 +114,6 @@ const Nav = () => {
       {
         text: (
           <button
-            style={buttonStyle}
             className={`navBtn ${active === "projects" && "styled"}`}
             onClick={() => handleNavClick("#projects")}
           >
@@ -128,7 +125,6 @@ const Nav = () => {
       {
         text: (
           <button
-            style={buttonStyle}
             className={`navBtn ${active === "personal-projects" && "styled"}`}
             onClick={() => handleNavClick("#personal-projects")}
           >
@@ -139,7 +135,6 @@ const Nav = () => {
       {
         text: (
           <button
-            style={buttonStyle}
             className={`navBtn ${active === "contact" && "styled"}`}
             onClick={() => handleNavClick("#contact")}
           >
@@ -149,7 +144,7 @@ const Nav = () => {
       },
     ],
     logo: {
-      text: <span>WebFolio</span>,
+      text: <span className="logo">WebFolio</span>,
     },
     style: {
       barStyles: {

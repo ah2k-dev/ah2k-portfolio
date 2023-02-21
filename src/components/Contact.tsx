@@ -49,6 +49,9 @@ const Contact: FC = () => {
           setIsSent(false);
         }, 5000);
         setLoading(false);
+        setEmail("");
+        setName("");
+        setSubject("");
       })
       .catch((err) => {
         setIsError(err.toString());

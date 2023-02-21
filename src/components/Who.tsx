@@ -61,6 +61,7 @@ const Who: FC = () => {
             style={{
               width: "fit-content",
               justifySelf: "flex-end",
+              cursor: "none",
             }}
             target="_blank"
             rel="noopener noreferrer"

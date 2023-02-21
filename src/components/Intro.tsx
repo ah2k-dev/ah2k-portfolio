@@ -68,6 +68,7 @@ const Intro: FC = () => {
                 autoStart: true,
                 loop: true,
                 deleteSpeed: 10,
+                // delay: 100,
               }}
             />
           </span>

@@ -149,7 +149,7 @@ const Nav = () => {
     style: {
       barStyles: {
         backgroundColor: "rgba(0, 0, 0, 0.85)",
-        zIndex: 1000,
+        zIndex: 20,
         boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.8)",
         backDropFilter: "blur(20px)",
         // display: "flex",
@@ -174,9 +174,13 @@ const Nav = () => {
     },
   };
   return (
-    <div>
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4, delay: 1.4 }}
+    >
       <Navbar {...props} />
-    </div>
+    </m.div>
   );
 };
 

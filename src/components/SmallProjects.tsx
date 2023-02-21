@@ -74,6 +74,7 @@ const SmallProjects: FC<SmallProjectsProps> = ({ projects }) => {
                       color: "white",
                       borderRadius: "5px",
                       boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
+                      cursor: "none",
                     }}
                   >
                     <FaGithub size={25} />

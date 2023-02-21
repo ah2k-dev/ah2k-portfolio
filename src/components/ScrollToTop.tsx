@@ -31,9 +31,10 @@ const ScrollToTop = () => {
             padding: "10px",
             border: "none",
             outline: "none",
-            cursor: "pointer",
-            zIndex: 1000,
+            cursor: "none",
+            zIndex: 40,
             color: "black",
+
           }}
           onClick={() => {
             scroll.scrollTo("#main", {
